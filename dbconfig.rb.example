@@ -1,0 +1,6 @@
+
+
+MYSQL_HOST = 'localhost'
+MYSQL_USERNAME = 'facemash'
+MYSQL_PASSWORD = 'pa$$word'
+MYSQL_DBNAME = 'facemash'

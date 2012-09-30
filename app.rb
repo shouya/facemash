@@ -3,7 +3,15 @@ require 'sinatra'
 
 class Facemash < Sinatra::Base
   get '/' do
-    'hello world'
+    erb :mainpage
+  end
+
+  post '/upvote' do
+    
+  end
+
+  post '/anotherpic' do
+    
   end
 end
 
