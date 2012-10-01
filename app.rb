@@ -1,10 +1,12 @@
 
 require 'sinatra'
+require 'base64'
+require 'json'
 
 require_relative 'dbinterface'
 
 before do
-  @dbi = get_db
+  @dbi = connect_database
 end
 
 get '/' do
@@ -16,8 +18,20 @@ post '/rate' do
   params['loster']
 end
 
-post '/anotherpic' do
-
+get '/refresh' do
+  content_type :json
+  return JSON.dump({
+                     :pic_left => {
+                       :data => Base64.encode64(File.read('temp/0111348.jpg')),
+                       :id => 1,
+                       :info => 'Katie'
+                     },
+                     :pic_right => {
+                       :data => Base64.encode64(File.read('temp/0111437.jpg')),
+                       :id => 3,
+                       :info => 'Lily'
+                     }
+                   })
 end
 
 

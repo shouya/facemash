@@ -23,8 +23,9 @@ table {
 
 td {
     width: 50%;
+    position: relative;
 }
-
+/*
 td.left_column {
     padding-right: 20px;
 }
@@ -32,13 +33,15 @@ td.left_column {
 td.rigth_column {
     padding-left: 20px;
 }
-
+*/
 div.photo_frame {
-    width: 100%;
-    height: 100%;
+    width: 390px;
+    height: 530px;
     margin: 20px;
     display: block;
     background-color: #346FB5;
+    z-index: 20;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .8);
 }
 
 img.photo_view {
@@ -46,3 +49,35 @@ img.photo_view {
     height: 100%;
     margin: auto;
 }
+
+div.photo_info {
+    display: none;
+    opacity: .8;
+    bottom: 21px;
+    left: 21px;
+    width: 380px;
+    height: 50px;
+    position: absolute;
+    background: rgba(0, 0, 0, .9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    color: snow;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-variant: small-caps;
+    font-size: 20px;
+    font-family: 'PT Sans', 'DejaVu Sans', 'Trebuchet MS',
+                  Arial, Helvetica, sans-serif;
+}
+
+div.voted {
+    display: block;
+    background: url(thumbs_up.png) no-repeat;
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    right: 0px;
+    bottom: 0px;
+    display: none;
+    opacity: .6;
+}
+
