@@ -1,0 +1,12 @@
+
+# Please modify the content below as save as 'dbdump.conf.rb'
+
+DB_NAME = 'dbname'
+DB_LOGINID = 'username'
+DB_PASSWD = 'pa$$word'
+DB_HOST = 'localhost'
+
+DIR_BASE = '/path/to/dir/to/store/tables'
+PAGE_SIZE = 100
+
+

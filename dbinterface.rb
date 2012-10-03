@@ -48,7 +48,7 @@ HERE
     pst.execute(name, barcode, other_info || '')
   end
 
-  def vote_student(id)
+  def vote(id)
     pst = @db_conn.prepare(<<HERE)
 UPDATE #{TABLE_NAME}
 SET rating = rating + 1

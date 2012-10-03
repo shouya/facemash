@@ -18,7 +18,7 @@ get '/main.html' do
 end
 
 post '/vote' do
-#  params['id']
+  @dbi.vote(params['id'])
 end
 
 get '/refresh' do
